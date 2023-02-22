@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classDepthSense_1_1Exception.html" title="The base exception class. " alt="" coords="133,283,293,309"/>
+<area shape="rect" id="node3" href="$classDepthSense_1_1ArgumentException.html" title="The type of the exception thrown when an argument is unset or invalid. " alt="" coords="343,5,559,32"/>
+<area shape="rect" id="node4" href="$classDepthSense_1_1ConfigurationException.html" title="The type of the exception thrown when a valid configuration failed to apply. " alt="" coords="361,57,540,98"/>
+<area shape="rect" id="node5" href="$classDepthSense_1_1InitializationException.html" title="The type of the exception thrown when an initialization error has occurred. " alt="" coords="365,122,536,163"/>
+<area shape="rect" id="node6" href="$classDepthSense_1_1InvalidOperationException.html" title="The type of the exception thrown when the current state of an object does not support the requested o..." alt="" coords="353,187,549,229"/>
+<area shape="rect" id="node7" href="$classDepthSense_1_1IOException.html" title="The type of the exception throw when a device or file I/O operation has failed. " alt="" coords="363,253,538,280"/>
+<area shape="rect" id="node8" href="$classDepthSense_1_1NotSupportedException.html" title="The type of the exception thrown when a unsupported operation is requested. " alt="" coords="359,305,542,346"/>
+<area shape="rect" id="node9" href="$classDepthSense_1_1StreamingException.html" title="The type of the exception thrown when a streaming error has occurred. " alt="" coords="341,371,560,397"/>
+<area shape="rect" id="node10" href="$classDepthSense_1_1TimeoutException.html" title="The type of the exception thrown when a timeout condition occurs. " alt="" coords="347,421,554,448"/>
+<area shape="rect" id="node11" href="$classDepthSense_1_1TransportException.html" title="The type of the exception thrown when a network or protocol error has occurred. " alt="" coords="343,472,558,499"/>
+<area shape="rect" id="node12" href="$classDepthSense_1_1UnauthorizedAccessException.html" title="The type of the exception thrown when access to a privileged operation is denied. ..." alt="" coords="361,523,540,565"/>
+</map>

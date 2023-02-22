@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/Test_DepthSense.dir/src/main.cpp.o  -o Test_DepthSense -rdynamic /opt/softkinetic/DepthSenseSDK/lib/libDepthSense.so /opt/softkinetic/DepthSenseSDK/lib/libDepthSensePlugins.so /opt/softkinetic/DepthSenseSDK/lib/libturbojpeg.so -Wl,-rpath,/opt/softkinetic/DepthSenseSDK/lib: 
