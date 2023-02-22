@@ -19,10 +19,10 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(CMAKE_INSTALL_PREFIX "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/SDK_DRIVER/Test_DepthSense")
 
-set(DEPTHSENSE_INCLUDE_DIR "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/SDK_DRIVER/DepthSenseSDK/include")
-set(DEPTHSENSE_LIBRARIES "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/SDK_DRIVER/DepthSenseSDK/lib/libDepthSense.so.1.9.0")
-set(DEPTHSENSE_PLUGINS_LIBRARIES "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/SDK_DRIVER/DepthSenseSDK/lib/libDepthSensePlugins.so.1.9.0")
-set(DEPTHSENSE_TURBOJPEG_LIBRARIES "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/SDK_DRIVER/DepthSenseSDK/lib/libturbojpeg.so")
+set(DEPTHSENSE_INCLUDE_DIR "/opt/softkinetic/DepthSenseSDK/include")
+set(DEPTHSENSE_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libDepthSense.so")
+set(DEPTHSENSE_PLUGINS_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libDepthSensePlugins.so")
+set(DEPTHSENSE_TURBOJPEG_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libturbojpeg.so")
 
 #set(GLUT_ROOT "C:/libraries/glut-3.7.6-bin")
 #set(GLUT_INCLUDE_DIR "C:/libraries/glut-3.7.6-bin")

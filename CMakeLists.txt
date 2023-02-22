@@ -11,46 +11,59 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 find_package(PCL 1.7.2 REQUIRED)
-# find_package(DSSDK REQUIRED)
 
 # ADD DSSDK
-set(DSSDK_INCLUDE_DIRS "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/DSSDK/depthsense/include")
-# set(DSSDK_LIBRARIES "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/DSSDK/lib/libDepthSense.so.1.4.5")
-
-add_library(DSSDK_LIBRARIES SHARED IMPORTED)
-set_target_properties(DSSDK_LIBRARIES PROPERTIES IMPORTED_LOCATION "/home/dyxcvi/Documents/INTERNSHIP/ds/lib/DSSDK/lib/libDepthSense.so")
+set(DEPTHSENSE_INCLUDE_DIR "/opt/softkinetic/DepthSenseSDK/include")
+set(DEPTHSENSE_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libDepthSense.so")
+set(DEPTHSENSE_PLUGINS_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libDepthSensePlugins.so")
+set(DEPTHSENSE_TURBOJPEG_LIBRARIES "/opt/softkinetic/DepthSenseSDK/lib/libturbojpeg.so")
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories(
   include
   ${PCL_INCLUDE_DIRS}
-  ${DSSDK_INCLUDE_DIRS}
+  ${DEPTHSENSE_INCLUDE_DIR}
 )
 
 link_directories(
   ${PCL_LIBRARY_DIRS}
+  ${DEPTHSENSE_LIBRARIES}
 )
 
 add_definitions(
   ${PCL_DEFINITIONS}
 )
 
-add_library(depth_sense
-  src/depth_sense/depth_sense_device_manager.cpp
-  src/depth_sense/depth_sense_grabber_impl.cpp
-  src/depth_sense_grabber.cpp
-  src/io_exception.cpp
-)
+# add_library(depth_sense
+#   src/depth_sense/depth_sense_device_manager.cpp
+#   src/depth_sense/depth_sense_grabber_impl.cpp
+#   src/depth_sense_grabber.cpp
+#   src/io_exception.cpp
+# )
+# target_include_directories(depth_sense PUBLIC 
+#   ${PCL_INCLUDE_DIRS} 
+#   ${DEPTHSENSE_INCLUDE_DIR} 
+#   /home/dyxcvi/Documents/INTERNSHIP/ds/include/
+# )
+# target_link_libraries(depth_sense
+#   depth_sense
+#   ${PCL_LIBRARIES}
+#   ${DEPTHSENSE_LIBRARIES}
+# )
 
 add_executable(depth_sense_viewer
   src/depth_sense_viewer.cpp
 )
-target_include_directories(depth_sense_viewer PUBLIC ${PCL_INCLUDE_DIRS} /home/dyxcvi/Documents/INTERNSHIP/ds/include/ /home/dyxcvi/Documents/INTERNSHIP/ds/lib/DSSDK/depthsense/include/)
+target_include_directories(depth_sense_viewer PUBLIC 
+  /home/dyxcvi/Documents/INTERNSHIP/ds/include/
+  ${PCL_INCLUDE_DIRS} 
+  ${DEPTHSENSE_INCLUDE_DIR} 
+)
 target_link_libraries(depth_sense_viewer
-  depth_sense
+  # depth_sense
   ${PCL_LIBRARIES}
-  DSSDK_LIBRARIES
+  ${DEPTHSENSE_LIBRARIES}
 )
 
 # add_executable(multi_grabber
@@ -59,7 +72,7 @@ target_link_libraries(depth_sense_viewer
 # target_link_libraries(multi_grabber
 #   depth_sense
 #   ${PCL_LIBRARIES}
-#   ${DSSDK_LIBRARIES}
+#   DEPTHSENSE_LIBRARIES
 # )
 
 if (BUILD_TESTS)
@@ -67,3 +80,4 @@ if (BUILD_TESTS)
   add_subdirectory(test)
 endif()
 
+ 
